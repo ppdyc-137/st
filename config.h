@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "MesloLGS Nerd Font:pixelsize=16:antialias=true:autohint=true";
+static char *font = "MesloLGS Nerd Font:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -94,7 +94,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 1;
 
 typedef struct {
 	const char* const colors[258]; /* terminal colors */
