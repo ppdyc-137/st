@@ -74,7 +74,7 @@ static unsigned int cursorthickness = 2;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "xterm-256color";
 
 /*
  * spaces per tab
@@ -109,13 +109,6 @@ typedef struct {
  * foreground, background, cursor, reverse cursor
  */
 static const ColorScheme schemes[] = {
-	// st (dark)
-	{{"black", "red3", "green3", "yellow3",
-	  "blue2", "magenta3", "cyan3", "gray90",
-	  "gray50", "red", "green", "yellow",
-	  "#5c5cff", "magenta", "cyan", "white",
-	  [256]="#cccccc", "#555555"}, 7, 0, 256, 257},
-
 	// Alacritty (dark)
 	{{"#1d1f21", "#cc6666", "#b5bd68", "#f0c674",
 	  "#81a2be", "#b294bb", "#8abeb7", "#c5c8c6",
@@ -130,13 +123,6 @@ static const ColorScheme schemes[] = {
 	  "#61afef", "#c678dd", "#56b6c2", "#dcdfe4",
 	  [256]="#cccccc", "#555555"}, 7, 0, 256, 257},
 
-	// One Half light
-	{{"#fafafa", "#e45649", "#50a14f", "#c18401",
-      "#0184bc", "#a626a4", "#0997b3", "#383a42",
-	  "#fafafa", "#e45649", "#50a14f", "#c18401",
-	  "#0184bc", "#a626a4", "#0997b3", "#383a42",
-	  [256]="#cccccc", "#555555"}, 7, 0, 256, 257},
-
 	// Solarized dark
 	{{"#073642", "#dc322f", "#859900", "#b58900",
 	  "#268bd2", "#d33682", "#2aa198", "#eee8d5",
@@ -144,30 +130,17 @@ static const ColorScheme schemes[] = {
 	  "#839496", "#6c71c4", "#93a1a1", "#fdf6e3",
 	  [256]="#93a1a1", "#fdf6e3"}, 12, 8, 256, 257},
 
-	// Solarized light
-	{{"#eee8d5", "#dc322f", "#859900", "#b58900",
-	  "#268bd2", "#d33682", "#2aa198", "#073642",
-	  "#fdf6e3", "#cb4b16", "#93a1a1", "#839496",
-	  "#657b83", "#6c71c4", "#586e75", "#002b36",
-	  [256]="#586e75", "#002b36"}, 12, 8, 256, 257},
+    // catppuccin Mocha
+    {{"#45475A", "#F38BA8", "#A6E3A1", "#F9E2AF",
+	  "#89B4FA", "#F5C2E7", "#94E2D5", "#BAC2DE",
+	  "#585B70", "#F38BA8", "#A6E3A1", "#F9E2AF",
+	  "#89B4FA", "#F5C2E7", "#94E2D5", "#A6ADC8",
+      [256]="#CDD6F4", [257]="#1E1E2E", [254]="#F5E0DC"}, 256, 257, 254, 254},
 
-	// Gruvbox dark
-	{{"#282828", "#cc241d", "#98971a", "#d79921",
-	  "#458588", "#b16286", "#689d6a", "#a89984",
-	  "#928374", "#fb4934", "#b8bb26", "#fabd2f",
-	  "#83a598", "#d3869b", "#8ec07c", "#ebdbb2",
-	  [256]="#ebdbb2", "#555555"}, 15, 0, 256, 257},
-
-	// Gruvbox light
-	{{"#fbf1c7", "#cc241d", "#98971a", "#d79921",
-	  "#458588", "#b16286", "#689d6a", "#7c6f64",
-	  "#928374", "#9d0006", "#79740e", "#b57614",
-	  "#076678", "#8f3f71", "#427b58", "#3c3836",
-	  [256]="#3c3836", "#555555"}, 15, 0, 256, 257},
 };
 
 static const char * const * colorname;
-int colorscheme = 1;
+int colorscheme = 0;
 
 /*
  * Default colors (colorname index)
